@@ -1,7 +1,14 @@
 let bun = Bun.serve({
     port : 3000,
     fetch(req,res) {
-        return new Response('hello world')
+        let url = new URL(req.url);
+        if(url.pathname === '/'){
+            return new Response('Home Page')
+        }
+        if(url.pathname === '/about'){
+            return new Response('about Page')
+        }
+        return new Response('404 Page')
     }
 })
 
