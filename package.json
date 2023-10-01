@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "start": "bun --watch index.js"
+  },
+  "dependencies": { "express": "^4.18.2", "is-even": "^1.0.0" }
+}
